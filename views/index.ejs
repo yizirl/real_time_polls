@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        选择终端机
+    </title>
+    <link href="//cdn.bootcss.com/material-design-icons/2.2.0/iconfont/material-icons.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/material-design-lite/1.1.1/material.min.css" rel="stylesheet">
+    <style>
+        .mdl-textfield {
+            width: 100%
+        }
+        
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body ng-controller="AppCtrl">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">选择终端机</span>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">About Me</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="">Link1</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <!-- Your content goes here -->
+                <form style="margin-top: 10px">
+                    <div class="demo-card-wide mdl-card mdl-shadow--6dp" style="width: 90%;text-align:center; margin:0 auto;">
+                        <div class="mdl-card__title">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <textarea class="mdl-textfield__input" type="text" rows="2" id="sample5" ng-model="poll.question"></textarea>
+                                <label class="mdl-textfield__label" for="sample5">Question...</label>
+                            </div>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <ul class="demo-list-item mdl-list" id="options">
+                                <li class="mdl-list__item" ng-repeat="option in poll.options track by $index">
+                                    <span class="mdl-list__item-primary-content">
+                                        <!--<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" id="sample3" ng-model=poll.options[$index] ng-keydown="$last && addNewOption($index + 1)">
+                                            <label class="mdl-textfield__label" for="sample3">Option...</label>
+                                        </div>-->
+                                        <div class="mdl-textfield mdl-js-textfield">
+                                            <input class="mdl-textfield__input" type="text" ng-model=poll.options[$index] ng-keydown="$last && addNewOption()">
+                                            <label class="mdl-textfield__label">option...</label>
+                                        </div>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1" style="text-align: left">
+                                <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" ng-model="poll.isMulti" ng-true-value="1" ng-false-value="0">
+                                <span class="mdl-checkbox__label">Allow multiple poll choices</span>
+                            </label>
+                            <div>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" ng-click="createPoll()">
+                                    Create
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+      <div class="mdl-snackbar__text"></div>
+      <button class="mdl-snackbar__action" type="button"></button>
+    </div>
+    <script src="//cdn.bootcss.com/angular.js/1.5.0/angular.min.js"></script>
+    <script src="//cdn.bootcss.com/material-design-lite/1.1.1/material.min.js"></script>
+    <script src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+    <script src="javascripts/layer.js"></script>
+    <script src="//cdn.bootcss.com/clipboard.js/1.5.9/clipboard.min.js"></script>
+    <script src="javascripts/index.js"></script>
+</body>
+
+</html>

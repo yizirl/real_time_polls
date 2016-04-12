@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        选择终端机
+    </title>
+    <link href="//cdn.bootcss.com/material-design-icons/2.2.0/iconfont/material-icons.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/material-design-lite/1.1.1/material.min.css" rel="stylesheet">
+</head>
+
+<body ng-controller="AppCtrl">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">选择终端机</span>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">About Me</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="">Link1</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <!-- Your content goes here -->
+                <div style="margin-top: 10px">
+                    <div class="demo-card-wide mdl-card mdl-shadow--6dp" style="width: 75%;text-align:center; margin:0 auto;">
+                        <div class="mdl-card__supporting-text">
+                            <div id="container" style="width:100%;height:100%"></div>
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <h5><span id="total"></span> total votes</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="//cdn.bootcss.com/angular.js/1.5.0/angular.min.js"></script>
+    <script src="//cdn.bootcss.com/material-design-lite/1.1.1/material.min.js"></script>
+    <script src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+    <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+    <script src="http://cdn.hcharts.cn/highcharts/modules/exporting.js"></script>
+    <script src="http://cdn.hcharts.cn/highcharts/highcharts-3d.js"></script>
+    <script src="//cdn.bootcss.com/socket.io/1.4.5/socket.io.min.js"></script>
+    <script src="../javascripts/results.js"></script>
+</body>
+
+</html>
