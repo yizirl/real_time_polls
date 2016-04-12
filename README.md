@@ -1,8 +1,11 @@
 # real_time_polls
 MEAN stack + socketio
 
-Install:
-npm install
-
-Run:
-node app.js
+######Install:
+```bash
+    npm install
+```
+######Run:
+```bash
+    node app.js
+```
